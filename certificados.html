@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Certificados - Davi Bachmann</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: var(--cor-fundo);
+      background-image: url("https://www.transparenttextures.com/patterns/pinstripe-light.png");
+    }
+
+    /* Ajuste de opacidade para as seções */
+    main {
+      position: relative;
+    }
+    
+    main::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: var(--cor-fundo);
+      opacity: 0.10;
+      z-index: 0;
+    }
+
+    main > * {
+      position: relative;
+      z-index: 1;
+    }
+  </style>
+</head>
+<body class="text-[var(--cor-texto)] font-sans bg-[var(--cor-fundo)]">
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 left-0 w-full z-50 shadow-md" style="background-color: rgba(255, 255, 255, 0.15); backdrop-filter: blur(4px);">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="index.html" class="text-[var(--cor-texto)] text-xl font-bold tracking-wide">
+        Bachmann<span class="text-[var(--cor-secundaria)]">.</span>
+      </a>
+      <ul class="flex space-x-4 text-sm">
+        <li><a href="index.html" class="montserrat1 hover:text-[var(--cor-secundaria)] transition-all nav-link">Voltar</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Conteúdo Principal -->
+  <main class="pt-24 pb-20 px-6">
+    <div class="max-w-6xl mx-auto">
+      <h1 class="text-4xl font-bold text-[var(--cor-secundaria)] mb-12 text-center border-b-2 pb-0.5 montserrat1" style="border-color: var(--cor-primaria);">
+        MEUS CERTIFICADOS
+      </h1>
+
+      <!-- Filtros -->
+      <div class="mb-8 flex flex-wrap gap-4 justify-center">
+        <button class="lato2 filtro-btn active px-4 py-2 rounded-full bg-[var(--cor-primaria)] hover:bg-[var(--cor-secundaria)] transition-all" data-filtro="principais">
+          Principais
+        </button>
+        <button class="lato2 filtro-btn px-4 py-2 rounded-full bg-[var(--cor-primaria)] hover:bg-[var(--cor-secundaria)] transition-all" data-filtro="datascience">
+          DataScience
+        </button>
+        <button class="lato2 filtro-btn px-4 py-2 rounded-full bg-[var(--cor-primaria)] hover:bg-[var(--cor-secundaria)] transition-all" data-filtro="powerbi">
+          PowerBI
+        </button>
+        <button class="lato2 filtro-btn px-4 py-2 rounded-full bg-[var(--cor-primaria)] hover:bg-[var(--cor-secundaria)] transition-all" data-filtro="bibliotecas-python">
+          Bibliotecas Python
+        </button>
+        <button class="lato2 filtro-btn px-4 py-2 rounded-full bg-[var(--cor-primaria)] hover:bg-[var(--cor-secundaria)] transition-all" data-filtro="outros">
+          Outros
+        </button>
+      </div>
+
+      <!-- Grid de Certificados -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="certificados-grid">
+        
+        <!-- Certificado 1 -->
+        <div class="certificado-item" data-categoria="principais datascience">
+          <div class="bg-white bg-opacity-60 rounded-xl p-6 h-full flex flex-col shadow-md" style="background-color: rgba(255, 255, 255, 0.15); backdrop-filter: blur(2px);">
+            <div class="flex items-center justify-between mb-4">
+              <img src="imagens/DSA-Logo.png" alt="Logo DataCamp" class="w-17 h-12">
+              <span class="lato text-sm">2025</span>
+            </div>
+            <h3 class="text-xl mb-4 montserrat3">Python para Data Science Intermediário</h3>
+            <p class="text-sm mb-2 montserrat1">Instituição: Dara Science Academy</p>
+            <p class="text-sm mb-4 flex-grow lato">Curso de Python focado em Data Science utilizando bibliotecas de visualização, deep learning e machine learning para análise preditiva.</p>
+            <div class="flex justify-between items-center mt-4">
+              <span class="lato text-sm">72 horas</span>
+              <a href="#" class="montserrat2 text-[var(--cor-secundaria)] hover:underline" onclick="abrirModal('certificado1')">
+                Ver certificado →
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certificado 17 -->
+        <div class="certificado-item" data-categoria="datascience">
+          <div class="bg-white bg-opacity-60 rounded-xl p-6 h-full flex flex-col shadow-md" style="background-color: rgba(255, 255, 255, 0.15); backdrop-filter: blur(2px);">
+            <div class="flex items-center justify-between mb-4">
+              <img src="imagens/DSA-Logo.png" alt="Logo DataCamp" class="w-17 h-12">
+              <span class="lato text-sm">2025</span>
+            </div>
+            <h3 class="text-xl mb-4 montserrat3">Python para Data Science Básico</h3>
+            <p class="text-sm mb-2 montserrat1">Instituição: Data Science Academy</p>
+            <p class="text-sm mb-4 flex-grow lato">Curso sobre conhecimentos básicos de Python.</p>
+            <div class="flex justify-between items-center mt-4">
+              <span class="lato text-sm">48 horas</span>
+              <a href="#" class="montserrat2 text-[var(--cor-secundaria)] hover:underline" onclick="abrirModal('certificado17')">
+                Ver certificado →
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certificado 16 -->
+        <div class="certificado-item" data-categoria="datascience">
+          <div class="bg-white bg-opacity-60 rounded-xl p-6 h-full flex flex-col shadow-md" style="background-color: rgba(255, 255, 255, 0.15); backdrop-filter: blur(2px);">
+            <div class="flex items-center justify-between mb-4">
+              <img src="imagens/DSA-Logo.png" alt="Logo DataCamp" class="w-17 h-12">
+              <span class="lato text-sm">2025</span>
+            </div>
+            <h3 class="text-xl mb-4 montserrat3">Python para Data Science Introdutório</h3>
+            <p class="text-sm mb-2 montserrat1">Instituição: Data Science Academy</p>
+            <p class="text-sm mb-4 flex-grow lato">Curso sobre conhecimentos introdutórios de Python.</p>
+            <div class="flex justify-between items-center mt-4">
+              <span class="lato text-sm">24 horas</span>
+              <a href="#" class="montserrat2 text-[var(--cor-secundaria)] hover:underline" onclick="abrirModal('certificado16')">
+                Ver certificado →
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certificado 2 -->
+        <div class="certificado-item" data-categoria="principais powerbi">
+          <div class="bg-white bg-opacity-60 rounded-xl p-6 h-full flex flex-col shadow-md" style="background-color: rgba(255, 255, 255, 0.15); backdrop-filter: blur(2px);">
+            <div class="flex items-center justify-between mb-4">
+              <img src="imagens/DSA-Logo.png" alt="Logo DataCamp" class="w-17 h-12">
+              <span class="lato text-sm">2024</span>
+            </div>
+            <h3 class="text-xl mb-4 montserrat3">Power BI para Data Science</h3>
+            <p class="text-sm mb-2 montserrat1">Instituição: Data Science Academy</p>
+            <p class="text-sm mb-4 flex-grow lato">Curso completo de Power BI.</p>
+            <div class="flex justify-between items-center mt-4">
+              <span class="lato text-sm">72 horas</span>
+              <a href="#" class="montserrat2 text-[var(--cor-secundaria)] hover:underline" onclick="abrirModal('certificado2')">
+                Ver certificado →
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certificado 3 -->
+        <div class="certificado-item" data-categoria="principais bibliotecas-python">
+          <div class="bg-white bg-opacity-60 rounded-xl p-6 h-full flex flex-col shadow-md" style="background-color: rgba(255, 255, 255, 0.15); backdrop-filter: blur(2px);">
+            <div class="flex items-center justify-between mb-4">
+              <img src="imagens/ALURA-Logo.jpeg" alt="Logo DataCamp" class="w-17 h-12">
+              <span class="lato text-sm">2024</span>
+            </div>
+            <h3 class="text-xl mb-4 montserrat3">NumPy: Análise numérica eficiente</h3>
+            <p class="text-sm mb-2 montserrat1">Instituição: Alura</p>
+            <p class="text-sm mb-4 flex-grow lato">Curso de introdução à biblioteca NumPy para análise numérica eficiente com Python.</p>
+            <div class="flex justify-between items-center mt-4">
+              <span class="lato text-sm">8 horas</span>
+              <a href="#" class="montserrat2 text-[var(--cor-secundaria)] hover:underline" onclick="abrirModal('certificado3')">
+                Ver certificado →
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certificado 4 -->
+        <div class="certificado-item" data-categoria="principais bibliotecas-python">
+          <div class="bg-white bg-opacity-60 rounded-xl p-6 h-full flex flex-col shadow-md" style="background-color: rgba(255, 255, 255, 0.15); backdrop-filter: blur(2px);">
+            <div class="flex items-center justify-between mb-4">
+              <img src="imagens/ALURA-Logo.jpeg" alt="Logo DataCamp" class="w-17 h-12">
+              <span class="lato text-sm">2024</span>
+            </div>
+            <h3 class="text-xl mb-4 montserrat3">Pandas: Tratando e Analisando Dados</h3>
+            <p class="text-sm mb-2 montserrat1">Instituição: Alura</p>
+            <p class="text-sm mb-4 flex-grow lato">Curso da biblioteca Pandas para manipulação de dados.</p>
+            <div class="flex justify-between items-center mt-4">
+              <span class="lato text-sm">12 horas</span>
+              <a href="#" class="montserrat2 text-[var(--cor-secundaria)] hover:underline" onclick="abrirModal('certificado4')">
+                Ver certificado →
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certificado 5 -->
+        <div class="certificado-item" data-categoria="principais powerbi">
+          <div class="bg-white bg-opacity-60 rounded-xl p-6 h-full flex flex-col shadow-md" style="background-color: rgba(255, 255, 255, 0.15); backdrop-filter: blur(2px);">
+            <div class="flex items-center justify-between mb-4">
+              <img src="imagens/ALURA-Logo.jpeg" alt="Logo DataCamp" class="w-17 h-12">
+              <span class="lato text-sm">2024</span>
+            </div>
+            <h3 class="text-xl mb-4 montserrat3">Power BI: Meu Primeiro DashBoard</h3>
+            <p class="text-sm mb-2 montserrat1">Instituição: Alura</p>
+            <p class="text-sm mb-4 flex-grow lato">Curso de introdução ao PowerBI para montagem de dashboard.</p>
+            <div class="flex justify-between items-center mt-4">
+              <span class="lato text-sm">8 horas</span>
+              <a href="#" class="montserrat2 text-[var(--cor-secundaria)] hover:underline" onclick="abrirModal('certificado5')">
+                Ver certificado →
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certificado 6 -->
+        <div class="certificado-item" data-categoria="principais datascience">
+          <div class="bg-white bg-opacity-60 rounded-xl p-6 h-full flex flex-col shadow-md" style="background-color: rgba(255, 255, 255, 0.15); backdrop-filter: blur(2px);">
+            <div class="flex items-center justify-between mb-4">
+              <img src="imagens/ALURA-Logo.jpeg" alt="Logo DataCamp" class="w-17 h-12">
+              <span class="lato text-sm">2023</span>
+            </div>
+            <h3 class="text-xl mb-4 montserrat3">Python para Data Science: Primeiros Passos</h3>
+            <p class="text-sm mb-2 montserrat1">Instituição: Alura</p>
+            <p class="text-sm mb-4 flex-grow lato">Curso base para Data Science com Python.</p>
+            <div class="flex justify-between items-center mt-4">
+              <span class="lato text-sm">10 horas</span>
+              <a href="#" class="montserrat2 text-[var(--cor-secundaria)] hover:underline" onclick="abrirModal('certificado6')">
+                Ver certificado →
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certificado 7 -->
+        <div class="certificado-item" data-categoria="bibliotecas-python">
+          <div class="bg-white bg-opacity-60 rounded-xl p-6 h-full flex flex-col shadow-md" style="background-color: rgba(255, 255, 255, 0.15); backdrop-filter: blur(2px);">
+            <div class="flex items-center justify-between mb-4">
+              <img src="imagens/ALURA-Logo.jpeg" alt="Logo DataCamp" class="w-17 h-12">
+              <span class="lato text-sm">2024</span>
+            </div>
+            <h3 class="text-xl mb-4 montserrat3">Pandas: Conhecendo a Biblioteca</h3>
+            <p class="text-sm mb-2 montserrat1">Instituição: Alura</p>
+            <p class="text-sm mb-4 flex-grow lato">Curso básico para ingressar na biblioteca Pandas.</p>
+            <div class="flex justify-between items-center mt-4">
+              <span class="lato text-sm">8 horas</span>
+              <a href="#" class="montserrat2 text-[var(--cor-secundaria)] hover:underline" onclick="abrirModal('certificado7')">
+                Ver certificado →
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certificado 8 -->
+        <div class="certificado-item" data-categoria="bibliotecas-python">
+          <div class="bg-white bg-opacity-60 rounded-xl p-6 h-full flex flex-col shadow-md" style="background-color: rgba(255, 255, 255, 0.15); backdrop-filter: blur(2px);">
+            <div class="flex items-center justify-between mb-4">
+              <img src="imagens/ALURA-Logo.jpeg" alt="Logo DataCamp" class="w-17 h-12">
+              <span class="lato text-sm">2024</span>
+            </div>
+            <h3 class="text-xl mb-4 montserrat3">Pandas: Selecionando e Agrupando Dados</h3>
+            <p class="text-sm mb-2 montserrat1">Instituição: Alura</p>
+            <p class="text-sm mb-4 flex-grow lato">Curso para aprofundamento em Pandas.</p>
+            <div class="flex justify-between items-center mt-4">
+              <span class="lato text-sm">8 horas</span>
+              <a href="#" class="montserrat2 text-[var(--cor-secundaria)] hover:underline" onclick="abrirModal('certificado8')">
+                Ver certificado →
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certificado 9 -->
+        <div class="certificado-item" data-categoria="bibliotecas-python">
+          <div class="bg-white bg-opacity-60 rounded-xl p-6 h-full flex flex-col shadow-md" style="background-color: rgba(255, 255, 255, 0.15); backdrop-filter: blur(2px);">
+            <div class="flex items-center justify-between mb-4">
+              <img src="imagens/ALURA-Logo.jpeg" alt="Logo DataCamp" class="w-17 h-12">
+              <span class="lato text-sm">2024</span>
+            </div>
+            <h3 class="text-xl mb-4 montserrat3">Pandas I/O: Trabalhando com Diferentes Formatos de Arquivos</h3>
+            <p class="text-sm mb-2 montserrat1">Instituição: Alura</p>
+            <p class="text-sm mb-4 flex-grow lato">Curso para tratamento de diferentes arquivos com Pandas.</p>
+            <div class="flex justify-between items-center mt-4">
+              <span class="lato text-sm">8 horas</span>
+              <a href="#" class="montserrat2 text-[var(--cor-secundaria)] hover:underline" onclick="abrirModal('certificado9')">
+                Ver certificado →
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certificado 10 -->
+        <div class="certificado-item" data-categoria="bibliotecas-python">
+          <div class="bg-white bg-opacity-60 rounded-xl p-6 h-full flex flex-col shadow-md" style="background-color: rgba(255, 255, 255, 0.15); backdrop-filter: blur(2px);">
+            <div class="flex items-center justify-between mb-4">
+              <img src="imagens/ALURA-Logo.jpeg" alt="Logo DataCamp" class="w-17 h-12">
+              <span class="lato text-sm">2024</span>
+            </div>
+            <h3 class="text-xl mb-4 montserrat3">Pandas: Transformação e Manipulação de Dados</h3>
+            <p class="text-sm mb-2 montserrat1">Instituição: Alura</p>
+            <p class="text-sm mb-4 flex-grow lato">Curso para desenvolver transformação e manipulação de dados com Pandas.</p>
+            <div class="flex justify-between items-center mt-4">
+              <span class="lato text-sm">6 horas</span>
+              <a href="#" class="montserrat2 text-[var(--cor-secundaria)] hover:underline" onclick="abrirModal('certificado10')">
+                Ver certificado →
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certificado 11 -->
+        <div class="certificado-item" data-categoria="powerbi">
+          <div class="bg-white bg-opacity-60 rounded-xl p-6 h-full flex flex-col shadow-md" style="background-color: rgba(255, 255, 255, 0.15); backdrop-filter: blur(2px);">
+            <div class="flex items-center justify-between mb-4">
+              <img src="imagens/ALURA-Logo.jpeg" alt="Logo DataCamp" class="w-17 h-12">
+              <span class="lato text-sm">2024</span>
+            </div>
+            <h3 class="text-xl mb-4 montserrat3">Power BI: Contruindo Cálculos com DAX</h3>
+            <p class="text-sm mb-2 montserrat1">Instituição: Alura</p>
+            <p class="text-sm mb-4 flex-grow lato">Curso para aperfeiçoamento de cálculos DAX do Power BI.</p>
+            <div class="flex justify-between items-center mt-4">
+              <span class="lato text-sm">8 horas</span>
+              <a href="#" class="montserrat2 text-[var(--cor-secundaria)] hover:underline" onclick="abrirModal('certificado11')">
+                Ver certificado →
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certificado 12 -->
+        <div class="certificado-item" data-categoria="powerbi">
+          <div class="bg-white bg-opacity-60 rounded-xl p-6 h-full flex flex-col shadow-md" style="background-color: rgba(255, 255, 255, 0.15); backdrop-filter: blur(2px);">
+            <div class="flex items-center justify-between mb-4">
+              <img src="imagens/ALURA-Logo.jpeg" alt="Logo DataCamp" class="w-17 h-12">
+              <span class="lato text-sm">2024</span>
+            </div>
+            <h3 class="text-xl mb-4 montserrat3">Power BI: Realizando ETL no Power Query</h3>
+            <p class="text-sm mb-2 montserrat1">Instituição: Alura</p>
+            <p class="text-sm mb-4 flex-grow lato">Curso para aperfeiçoamento de ETL com Power BI.</p>
+            <div class="flex justify-between items-center mt-4">
+              <span class="lato text-sm">8 horas</span>
+              <a href="#" class="montserrat2 text-[var(--cor-secundaria)] hover:underline" onclick="abrirModal('certificado12')">
+                Ver certificado →
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certificado 13 -->
+        <div class="certificado-item" data-categoria="datascience">
+          <div class="bg-white bg-opacity-60 rounded-xl p-6 h-full flex flex-col shadow-md" style="background-color: rgba(255, 255, 255, 0.15); backdrop-filter: blur(2px);">
+            <div class="flex items-center justify-between mb-4">
+              <img src="imagens/ALURA-Logo.jpeg" alt="Logo DataCamp" class="w-17 h-12">
+              <span class="lato text-sm">2024</span>
+            </div>
+            <h3 class="text-xl mb-4 montserrat3">Python para Data Science: Funções, Estruturas de Dados e Exceções</h3>
+            <p class="text-sm mb-2 montserrat1">Instituição: Alura</p>
+            <p class="text-sm mb-4 flex-grow lato">Curso para aperfeiçoamento de Python para Data Science.</p>
+            <div class="flex justify-between items-center mt-4">
+              <span class="lato text-sm">8 horas</span>
+              <a href="#" class="montserrat2 text-[var(--cor-secundaria)] hover:underline" onclick="abrirModal('certificado13')">
+                Ver certificado →
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certificado 14 -->
+        <div class="certificado-item" data-categoria="datascience">
+          <div class="bg-white bg-opacity-60 rounded-xl p-6 h-full flex flex-col shadow-md" style="background-color: rgba(255, 255, 255, 0.15); backdrop-filter: blur(2px);">
+            <div class="flex items-center justify-between mb-4">
+              <img src="imagens/ALURA-Logo.jpeg" alt="Logo DataCamp" class="w-17 h-12">
+              <span class="lato text-sm">2024</span>
+            </div>
+            <h3 class="text-xl mb-4 montserrat3">Data Science: Análise e Visualização de Dados</h3>
+            <p class="text-sm mb-2 montserrat1">Instituição: Alura</p>
+            <p class="text-sm mb-4 flex-grow lato">Curso sobre visualização de dados com PyPlot para Data Science.</p>
+            <div class="flex justify-between items-center mt-4">
+              <span class="lato text-sm">6 horas</span>
+              <a href="#" class="montserrat2 text-[var(--cor-secundaria)] hover:underline" onclick="abrirModal('certificado14')">
+                Ver certificado →
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certificado 15 -->
+        <div class="certificado-item" data-categoria="bibliotecas-python">
+          <div class="bg-white bg-opacity-60 rounded-xl p-6 h-full flex flex-col shadow-md" style="background-color: rgba(255, 255, 255, 0.15); backdrop-filter: blur(2px);">
+            <div class="flex items-center justify-between mb-4">
+              <img src="imagens/ALURA-Logo.jpeg" alt="Logo DataCamp" class="w-17 h-12">
+              <span class="lato text-sm">2024</span>
+            </div>
+            <h3 class="text-xl mb-4 montserrat3">Pandas: Limpeza e Tratamento de Dados</h3>
+            <p class="text-sm mb-2 montserrat1">Instituição: Alura</p>
+            <p class="text-sm mb-4 flex-grow lato">Curso sobre limpeza e tratamento de dados com Panda.</p>
+            <div class="flex justify-between items-center mt-4">
+              <span class="lato text-sm">8 horas</span>
+              <a href="#" class="montserrat2 text-[var(--cor-secundaria)] hover:underline" onclick="abrirModal('certificado15')">
+                Ver certificado →
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Adicione mais certificados aqui -->
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Modal -->
+  <div id="certificadoModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+    <div class="bg-[var(--cor-fundo)] p-6 rounded-xl max-w-3xl w-full mx-4">
+      <div class="flex justify-between items-center mb-4">
+        <h3 class="montserrat2 text-2xl font-bold" id="modalTitulo"></h3>
+        <button onclick="fecharModal()" class="text-2xl">&times;</button>
+      </div>
+      <img id="modalImagem" src="" alt="Certificado" class="w-full rounded-lg mb-4">
+      <div class="text-center">
+        <a href="#" id="modalDownload" class="lato bg-[var(--cor-primaria)] hover:bg-[var(--cor-secundaria)] text-[var(--cor-texto)] px-6 py-2 rounded-full inline-flex items-center gap-2 transition-all">
+          <i class="fas fa-download"></i> Download PDF
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+
+    // Filtros
+    const filtros = document.querySelectorAll('.filtro-btn');
+    const certificados = document.querySelectorAll('.certificado-item');
+
+    filtros.forEach(filtro => {
+      filtro.addEventListener('click', () => {
+        // Atualiza visual dos botões
+        filtros.forEach(f => f.classList.remove('active'));
+        filtro.classList.add('active');
+
+        const categoriaSelecionada = filtro.dataset.filtro;
+
+        certificados.forEach(certificado => {
+          const categoriasDoCard = certificado.dataset.categoria.toLowerCase();
+
+        certificado.style.display = categoriasDoCard.includes(categoriaSelecionada)
+          ? 'block'
+          : 'none';
+        });
+      });
+    });
+
+    // Modal
+    function abrirModal(certificadoId) {
+      const modal = document.getElementById('certificadoModal');
+      const titulo = document.getElementById('modalTitulo');
+      const imagem = document.getElementById('modalImagem');
+      const download = document.getElementById('modalDownload');
+
+      // Aqui você pode definir o conteúdo do modal baseado no certificadoId
+      const certificados = {
+        certificado1: {
+          titulo: ' Python para Data Science - DSA',
+          imagem: 'imagens/certificados/certificate-python-intermediario-DSA.png',
+          pdf: 'assets/certificate-python-para-data-science-intermediario-DSA.pdf'
+        },
+        certificado2: {
+          titulo: 'Power BI para Data Science',
+          imagem: 'imagens/certificados/certificate-power-bi-para-data-science.png',
+          pdf: 'assets/certificate-power-bi-para-data-science-DSA.pdf'
+        },
+        certificado3: {
+          titulo: 'NumPy: Análise numérica eficiente',
+          imagem: 'imagens/certificados/certificate-numpy-ALURA.png',
+          pdf: 'assets/certificate-numpy-ALURA.pdf'
+        },
+          certificado4: {
+          titulo: 'Pandas: Tratando e Analisando Dados',
+          imagem: 'imagens/certificados/certificate-pandas-tratamento-de-dados-ALURA.png',
+          pdf: 'assets/certificate-pandas-tratamento-de-dados-ALURA.pdf'
+        },
+        certificado5: {
+          titulo: 'Power BI: Meu Primeiro DashBoard',
+          imagem: 'imagens/certificados/certificate-powerbi-primeiro-dash-ALURA.png',
+          pdf: 'assets/certificate-powerbi-primeiro-dash-ALURA.pdf'
+        },
+        certificado6: {
+          titulo: 'Python para Data Science: Primeiros Passos',
+          imagem: 'imagens/certificados/certificate-python-para-data-science-ALURA.png',
+          pdf: 'assets/certificate-python-para-data-science-ALURA.pdf'
+        },
+        certificado7: {
+          titulo: 'Pandas: Conhecendo a Biblioteca',
+          imagem: 'imagens/certificados/certificate-pandas-conhecendo-ALURA.png',
+          pdf: 'assets/certificate-pandas-conhecendo-ALURA.pdf'
+        },
+        certificado8: {
+          titulo: 'Pandas: Selecionando e Agrupando Dados',
+          imagem: 'imagens/certificados/certificate-pandas-selecionando-ALURA.png',
+          pdf: 'assets/certificate-pandas-selecionando-ALURA.pdf'
+        },
+        certificado9: {
+          titulo: 'Pandas I/O: Trabalhando com Diferentes Formatos de Arquivos',
+          imagem: 'imagens/certificados/certificate-pandas-io-ALURA.png',
+          pdf: 'assets/certificate-pandas-io-ALURA.pdf'
+        },
+        certificado10: {
+          titulo: 'Pandas: Transformação e Manipulação de Dados',
+          imagem: 'imagens/certificados/certificate-pandas-manipulacao-ALURA.png',
+          pdf: 'assets/certificate-pandas-manipulacao-ALURA.pdf'
+        },
+        certificado11: {
+          titulo: 'Power BI: Contruindo Cálculos com DAX',
+          imagem: 'imagens/certificados/certificate-powerbi-dax-ALURA.png',
+          pdf: 'assets/certificate-powerbi-dax-ALURA.pdf'
+        },
+        certificado12: {
+          titulo: 'Power BI: Realizando ETL no Power Query',
+          imagem: 'imagens/certificados/certificate-powerbi-etl-ALURA.png',
+          pdf: 'assets/certificate-powerbi-etl-ALURA.pdf'
+        },
+        certificado13: {
+          titulo: 'Python para Data Science: Funções, Estruturas de Dados e Exceções',
+          imagem: 'imagens/certificados/certificate-python-func-ALURA.png',
+          pdf: 'assets/certificate-python-func-ALURA.pdf'
+        },
+        certificado14: {
+          titulo: 'Data Science: Análise e Visualização de Dados',
+          imagem: 'imagens/certificados/certificate-python-visu-ALURA.png',
+          pdf: 'assets/certificate-python-visu-ALURA.pdf'
+        },
+        certificado15: {
+          titulo: 'Pandas: Limpeza e Tratamento de Dados',
+          imagem: 'imagens/certificados/certificate-pandas-limpeza-ALURA.png',
+          pdf: 'assets/certificate-pandas-limpeza-ALURA.pdf'
+        },
+        certificado16: {
+          titulo: 'Python para Data Science Introdutório',
+          imagem: 'imagens/certificados/certificate-python-introdutorio-DSA.png',
+          pdf: 'assets/certificate-python-introdutorio-DSA.pdf'
+        }
+        ,
+        certificado17: {
+          titulo: 'Python para Data Science Básico',
+          imagem: 'imagens/certificados/certificate-python-basico-DSA.png',
+          pdf: 'assets/certificate-python-basico-DSA.pdf'
+        }
+
+      };
+
+      const cert = certificados[certificadoId];
+      titulo.textContent = cert.titulo;
+      imagem.src = cert.imagem;
+      download.href = cert.pdf;
+
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function fecharModal() {
+      const modal = document.getElementById('certificadoModal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    // Fechar modal ao clicar fora
+    document.getElementById('certificadoModal').addEventListener('click', (e) => {
+      if (e.target === document.getElementById('certificadoModal')) {
+        fecharModal();
+      }
+    });
+  </script>
+
+</body>
+</html> 

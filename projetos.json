@@ -1,0 +1,67 @@
+{
+  "projetos": [
+    {
+      "id": 1,
+      "titulo": "Alertas de Monitoramento",
+      "descricao_curta": "Automação de alertas em Python para monitoramento de diferentes atividades.",
+      "descricao_completa": "Desenvolvimento de um programa em Python para automação de alertas de monitoramento fiscal, com conexão a banco de dados, execução de regras complexas de filtragem e envio automatizado por e-mail. A solução foi planejada de forma modular e reutilizável, permitindo a criação de múltiplos alertas a partir de uma mesma base de código. Inicialmente idealizado para monitorar notas fiscais destinadas não manifestadas, o projeto evoluiu para atender outras demandas semelhantes com mínima adaptação. Cada alerta utiliza uma estrutura central de automação que executa, periodicamente, uma query SQL com múltiplas regras de negócio, identifica ocorrências críticas e dispara e-mails para os responsáveis com as informações relevantes. A arquitetura do projeto permite adicionar novos alertas apenas ajustando parâmetros e consultas, sem duplicar lógica. A modularidade e clareza da estrutura contribuíram para acelerar a entrega de novas automações, reduzir o retrabalho e aumentar a confiabilidade dos processos fiscais monitorados. Além disso, as variáveis são armazenadas em arquivos .env, centralizando e facilitando a manutenção de senhas e credenciais por parte de pessoas menos técnica.",
+      "tecnologias": ["Python", "SQL Server", "Pandas", "SMTP"],
+      "imagens_galeria": [
+        "https://via.placeholder.com/800x600",
+        "https://via.placeholder.com/800x600",
+        "https://via.placeholder.com/800x600"
+      ],
+      "link_github": "https://github.com/DaviBachmann/alertas-monitoramento",
+      "data": "2023",
+      "destaques": [
+        "Estrutura modular e reutilizável para criação de múltiplos alertas com base em uma única lógica",
+        "Conexão com banco de dados para execução de queries complexas com múltiplas regras de negócio",
+        "Envio automatizado de e-mails com dados relevantes diretamente aos responsáveis",
+        "Agendamento periódico com execução contínua sem necessidade de intervenção manual"
+      ]
+    },
+    {
+      "id": 2,
+      "titulo": "Extrator de XML",
+      "descricao_curta": "Programa para realizar download de milhões de XMLs utilizando threads e conexões com API.",
+      "descricao_completa": "Desenvolvimento de um programa em Python com multithreading, conexão a banco de dados e consumo de APIs para download massivo de documentos XML. \nO projeto surgiu ao perceber a ineficiência do método antigo de download via PowerShell, que limitava a operação a cerca de 10 mil XMLs por hora. A nova abordagem viabilizou o download de até 100 mil documentos no mesmo intervalo de tempo — um aumento expressivo de produtividade. \nO programa permite diferentes métodos para inserção da chave de acesso, coleta os dados diretamente do banco em tempo real e realiza os downloads de forma paralela, com melhoria considerável na performance. \nA performance final pode variar conforme o hardware e a estabilidade da conexão com a internet.",
+      "tecnologias": ["Python", "SQL Server", "API", "Multithreading"],
+      "imagens_galeria": [
+        "imagens/galeria_extrator/Screenshot_Extrator-XML.png",
+        "imagens/galeria_extrator/Screenshot_Extrator_Input.bmp",
+        "imagens/galeria_extrator/Screenshot_Extrator_DBConfig.bmp",
+        "imagens/galeria_extrator/Screenshot_Extrator_Pastas.bmp",
+        "imagens/galeria_extrator/Screenshot_Extrator_XMLs.bmp"
+      ],
+      "link_github": "https://github.com/DaviBachmann/extrator-xml",
+      "data": "2024",
+      "destaques": [
+        "Interação com usuário",
+        "Variedade de opções para coleta de chave de acesso do documento",
+        "Conexão com banco de dados para coleta dos documentos em tempo real",
+        "Otimização de performance utilizando threads para get simultâneo"
+      ]
+    },
+    {
+      "id": 3,
+      "titulo": "Programa de Manutenção de Usuários",
+      "descricao_curta": "Um programa para facilitar o cadastro e desativação de usuários administradores.",
+      "descricao_completa": "Desenvolvimento de uma aplicação em Python para padronizar e automatizar o processo de criação e desativação de usuários administradores nas bases da empresa. O projeto surgiu a partir da necessidade de aumentar a segurança e a praticidade na gestão de acessos administrativos, evitando processos manuais e propensos a falhas. Com o QG, é possível criar rapidamente um usuário com o mesmo login e senha em múltiplas bases, garantindo consistência e economia de tempo. Além disso, a funcionalidade de desativação centralizada permite encerrar acessos de forma ágil e padronizada, o que contribui diretamente para a redução de riscos de segurança — especialmente em casos onde o desligamento do colaborador exige ação imediata. A ferramenta proporciona mais controle, padronização e segurança no ambiente corporativo, sendo uma solução eficiente e reutilizável para times de suporte, infraestrutura ou segurança da informação.",
+      "tecnologias": ["Python", "SQL Server"],
+      "imagens_galeria": [
+        "imagens/galeria_usuario/Screenshot_Cadastro_Usuario.png",
+        "imagens/galeria_usuario/Screenshot_Desativacao_Usuario.png",
+        "imagens/galeria_usuario/Screenshot_Evidencia_Usuario.png"
+      ],
+      "link_github": "https://github.com/DaviBachmann/manutencao-usuario",
+      "data": "2023",
+      "destaques": [
+        "Padronização automática de login e senha para usuários administradores",
+        "Execução simultânea de ações em diversas bases, garantindo agilidade e consistência",
+        "Centralização do controle de acessos, evitando erros manuais e atrasos operacionais",
+        "Facilidade para desativar acessos de ex-colaboradores, contribuindo diretamente para a segurança da informação",
+        "Código modular e reutilizável, permitindo expansão futura para outros tipos de usuários ou permissões"
+      ]
+    }
+  ]
+}

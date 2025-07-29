@@ -1,1 +1,677 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Davi Bachmann - Portifólio</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: var(--cor-fundo);
+      background-image: url("https://www.transparenttextures.com/patterns/axiom-pattern.png");
+    }
+
+    /*
+    axiom-pattern 0.25
+    diamond-upholstery 0.25
+    gradient-squares 0.10
+    padded 0.70
+    */
+
+    /* Ajuste de opacidade para as seções para garantir legibilidade */
+    section {
+      position: relative;
+    }
+    
+    section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: var(--cor-fundo);
+      opacity: 0.18;
+      z-index: 0;
+    }
+
+    section > * {
+      position: relative;
+      z-index: 1;
+    }
+  </style>
+</head>
+<body class="text-[var(--cor-texto)] font-sans">
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 left-0 w-full z-50 shadow-md" style="background-color: rgba(255, 255, 255, 0.15); backdrop-filter: blur(4px);"  >
+    <div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
+      <h1 class="text-lg text-[var(--cor-texto)] text-x1 font-extrabold tracking-wide">
+        Bachmann<span class="text-lg text-[var(--cor-secundaria)]">.</span>
+      </h1>
+      <ul class="flex space-x-4 text-sm">
+        <li><a href="#inicio" class="montserrat1 hover:text-[var(--cor-secundaria)] transition-all nav-link">Início</a></li>
+        <li><a href="#sobre" class="montserrat1 hover:text-[var(--cor-secundaria)] transition-all nav-link">Sobre</a></li>
+        <li><a href="#projetos" class="montserrat1 hover:text-[var(--cor-secundaria)] transition-all nav-link">Projetos</a></li>
+        <li><a href="#certificados" class="montserrat1 hover:text-[var(--cor-secundaria)] transition-all nav-link">Certificados</a></li>
+        <li><a href="#habilidades" class="montserrat1 hover:text-[var(--cor-secundaria)] transition-all nav-link">Habilidades</a></li>
+        <li><a href="#contato" class="montserrat1 hover:text-[var(--cor-secundaria)] transition-all nav-link">Contato</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="inicio" class="min-h-screen flex items-center justify-center px-10 py-20 bg-[var(--cor-fundo)]">
+    <div class="max-w-3xl h-full flex flex-col justify-center items-center text-center" data-aos="fade-right">
+      <h1 class="montserrat1 text-5xl font-extrabold text-[var(--cor-texto)] mb-6">
+        OLÁ! SOU DAVI BACHMANN</span>
+      </h1>
+      <p class="lato text-lg mb-8 text-[var(--cor-texto)]">
+        Sou Davi Bachmann, cientista de dados em formação, com foco em projetos práticos que envolvem análise, visualização e modelagem de dados.
+      </p>
+
+      <a href="#projetos"
+        class="montserrat2 inline-flex items-center hover:underline nav-link bg-[var(--cor-primaria)] hover:bg-[var(--cor-secundaria)] text-[var(--cor-texto)] py-2 px-6 rounded-full transition duration-300 mb-4">
+        Ver meus projetos
+      </a>
+
+      <a href="assets/Curriculo-DaviBachmann.pdf" download
+        class="montserrat2 btn-primario px-7 py-3 shadow-md transition duration-300 hover:scale-110 flex items-center gap-2">
+        <i class="fas fa-download"></i> Baixar Currículo
+      </a>
+
+    </div>
+  </section>
+
+  <!-- Sobre -->
+  <section id="sobre" class="py-20 px-10 bg-[var(--cor-fundo)]">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12" data-aos="fade-up">
+      
+      <!-- Texto -->
+      <div class="flex-1">
+        <h3 class="montserrat1 text-4xl font-bold text-[var(--cor-secundaria)] mb-12 border-b-2 inline-block pb-0.5"
+          style="border-color: var(--cor-primaria);">
+          SOBRE MIM
+        </h3>
+        <p class="lato text-lg text-[var(--cor-texto)] leading-relaxed">
+          Sou um cientista de dados em início de jornada, apaixonado por tecnologia, análise de dados e seu potencial de transformação.
+          Tenho me dedicado a desenvolver habilidades em análise exploratória, visualização de dados e modelagem preditiva, com interesse especial na aplicação de dados na área da saúde e esporte.
+          Acredito no poder dos dados para gerar insights valiosos e busco sempre escrever código limpo, bem estruturado e com propósito, transformando dados em soluções reais.
+        </p>
+        <p class="lato text-lg text-[var(--cor-texto)] mt-4">
+          Busco aplicar com proatividade o conhecimento e venho adquirindo em cursos e formações em projetos para desenvolver minhas habilidades práticas em ferramentes constantemente utilizadas em Ciência de Dados.
+        </p>
+        <p class="lato text-lg text-[var(--cor-texto)] mt-4">
+          Atualmente, trabalho com tecnologias como <strong>Python, SQL Server, Jupyter</strong> e <strong>Power BI</strong>.
+          Sempre estou aprendendo algo novo para evoluir cada vez mais como data scientist.
+        </p>
+      </div>
+
+      <!-- src="https://undraw.co/api/illustrations/33b8a84e-f26f-4ad5-ae7f-3085e2f4d3f7" -->
+
+      <!-- Ilustração -->
+      <div class="flex-1" data-aos="zoom-in">
+        <img src=imagens/imagem_portifolio.jpg alt="Ilustração sobre mim" class="w-full max-w-md mx-auto rounded-xl shadow-md">
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+
+    // Scroll suave
+    document.querySelectorAll('a.nav-link').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').replace('#', '');
+        const target = document.getElementById(targetId);
+        window.scrollTo({
+          top: target.offsetTop - 80,
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+
+  <!-- Projetos -->
+  <section id="projetos" class="py-20 bg-[var(--cor-fundo)] text-[var(--cor-texto)]">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <h3 class="montserrat1 text-4xl font-bold text-[var(--cor-secundaria)] mb-12 border-b-2 inline-block pb-0.5"
+          style="border-color: var(--cor-primaria);">
+          PROJETOS
+        </h3>
+      </div>
+
+      <!-- Swiper -->
+      <div class="swiper projetosSwiper">
+        <div class="swiper-wrapper">
+          <!-- Projeto 1 -->
+          <div class="swiper-slide">
+            <div class="projeto-card rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 mx-auto max-w-4xl" style="background-color: rgba(255, 255, 255, 0.15); backdrop-filter: blur(2px);">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6 p-8">
+                <div class="flex flex-col justify-between">
+                  <div>
+                    <h3 class="montserrat1 text-4xl font-bold mb-4">Alertas de Monitoramento</h3>
+                    <p class="lato2 mb-6">Automação de alertas em Python para monitoramento de diferentes atividades.</p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                      <span class="lato px-3 py-1 bg-[var(--cor-primaria)] rounded-full text-sm">Python</span>
+                      <span class="lato px-3 py-1 bg-[var(--cor-primaria)] rounded-full text-sm">SQL Server</span>
+                      <span class="lato px-3 py-1 bg-[var(--cor-primaria)] rounded-full text-sm">Pandas</span>
+                      <span class="lato px-3 py-1 bg-[var(--cor-primaria)] rounded-full text-sm">SMTP</span>
+                      <span class="lato px-3 py-1 bg-[var(--cor-primaria)] rounded-full text-sm">.env</span>
+                    </div>
+                  </div>
+                  <div class="flex gap-4">
+                    <a href="projeto.html?id=1" class="montserrat3 btn-detalhes inline-block bg-[var(--cor-primaria)] hover:bg-[var(--cor-secundaria)] text-[var(--cor-texto)] px-6 py-2 transition-all duration-300">
+                      Ver detalhes
+                    </a>
+                    <a href="https://github.com/DaviBachmann/alertas-monitoramento" class="inline-flex items-center text-[var(--cor-secundaria)] hover:underline">
+                      <i class="fab fa-github mr-2"></i> GitHub
+                    </a>
+                  </div>
+                </div>
+                <div class="relative h-[300px] rounded-xl overflow-hidden">
+                  <img src="imagens/logo_alerta_monitoramento.png" alt="Projeto 2" class="absolute inset-0 w-full h-full object-cover">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Projeto 2 -->
+          <div class="swiper-slide">
+            <div class="projeto-card rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 mx-auto max-w-4xl" style="background-color: rgba(255, 255, 255, 0.15); backdrop-filter: blur(2px);">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6 p-8">
+                <div class="flex flex-col justify-between">
+                  <div>
+                    <h3 class="montserrat1 text-4xl font-bold mb-4">Extrator de XML</h3>
+                    <p class="lato2 mb-6">Programa para realizar download de milhões de XMLs utilizando threads e conexões com API.</p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                      <span class="lato px-3 py-1 bg-[var(--cor-primaria)] rounded-full text-sm">Python</span>
+                      <span class="lato px-3 py-1 bg-[var(--cor-primaria)] rounded-full text-sm">SQL Server</span>
+                      <span class="lato px-3 py-1 bg-[var(--cor-primaria)] rounded-full text-sm">API</span>
+                      <span class="lato px-3 py-1 bg-[var(--cor-primaria)] rounded-full text-sm">Multithreading</span>
+                      <span class="lato px-3 py-1 bg-[var(--cor-primaria)] rounded-full text-sm">.env</span>
+                    </div>
+                  </div>
+                  <div class="flex gap-4">
+                    <a href="projeto.html?id=2" class="montserrat3 btn-detalhes inline-block bg-[var(--cor-primaria)] hover:bg-[var(--cor-secundaria)] text-[var(--cor-texto)] px-6 py-2 transition-all duration-300">
+                      Ver detalhes
+                    </a>
+                    <a href="https://github.com/DaviBachmann/extrator-xml" class="inline-flex items-center text-[var(--cor-secundaria)] hover:underline">
+                      <i class="fab fa-github mr-2"></i> GitHub
+                    </a>
+                  </div>
+                </div>
+                <div class="relative h-[300px] rounded-xl overflow-hidden">
+                  <img src="imagens/logo_extrator_xml.png" alt="Projeto 1" class="absolute inset-0 w-full h-full object-cover">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Projeto 3 -->
+          <div class="swiper-slide">
+            <div class="projeto-card rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 mx-auto max-w-4xl" style="background-color: rgba(255, 255, 255, 0.15); backdrop-filter: blur(2px);">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6 p-8">
+                <div class="flex flex-col justify-between">
+                  <div>
+                    <h3 class="montserrat1 text-4xl font-bold mb-4">Programa de Manutenção de Usuários</h3>
+                    <p class="lato2 mb-6">Um programa para facilitar o cadastro e desativação de usuários administradores.</p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                      <span class="lato px-3 py-1 bg-[var(--cor-primaria)] rounded-full text-sm">Python</span>
+                      <span class="lato px-3 py-1 bg-[var(--cor-primaria)] rounded-full text-sm">SQL Server</span>
+                      <span class="lato px-3 py-1 bg-[var(--cor-primaria)] rounded-full text-sm">.env</span>
+                    </div>
+                  </div>
+                  <div class="flex gap-4">
+                    <a href="projeto.html?id=3" class="montserrat3 btn-detalhes inline-block bg-[var(--cor-primaria)] hover:bg-[var(--cor-secundaria)] text-[var(--cor-texto)] px-6 py-2 transition-all duration-300">
+                      Ver detalhes
+                    </a>
+                    <a href="https://github.com/DaviBachmann/manutencao-usuario" class="inline-flex items-center text-[var(--cor-secundaria)] hover:underline">
+                      <i class="fab fa-github mr-2"></i> GitHub
+                    </a>
+                  </div>
+                </div>
+                <div class="relative h-[300px] rounded-xl overflow-hidden">
+                  <img src="imagens/logo_manutencao_usuario.jpg" alt="Projeto 3" class="absolute inset-0 w-full h-full object-cover">
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next text-[var(--cor-secundaria)]"></div>
+        <div class="swiper-button-prev text-[var(--cor-secundaria)]"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Certificados -->
+  <section id="certificados" class="py-20 bg-[var(--cor-fundo)] text-[var(--cor-texto)]">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center">
+        <h3 class="montserrat1 text-4xl font-bold text-[var(--cor-secundaria)] mb-12 border-b-2 inline-block pb-0.5"
+          style="border-color: var(--cor-primaria);">
+          Certificados
+        </h3>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+        <!-- Certificado 1 -->
+        <div class="certificado-item" data-categoria="principais datascience">
+          <div class="bg-white bg-opacity-60 rounded-xl p-6 h-full flex flex-col shadow-md" style="background-color: rgba(255, 255, 255, 0.15); backdrop-filter: blur(2px);">
+            <div class="flex items-center justify-between mb-4">
+              <img src="imagens/DSA-Logo.png" alt="Logo DataCamp" class="w-17 h-12">
+              <span class="lato2 text-sm">2025</span>
+            </div>
+            <h3 class="montserrat2 text-xl font-semibold mb-2">Python para Data Science Intermediário</h3>
+            <p class="lato2 text-sm mb-3">Instituição: Dara Science Academy</p>
+            <p class="lato text-sm mb-4 flex-grow">Curso de Python focado em Data Science utilizando bibliotecas de visualização, deep learning e machine learning para análise preditiva.</p>
+            <div class="flex justify-between items-center mt-4">
+              <span class="lato2 text-sm">72 horas</span>
+              <button onclick="abrirModal('certificado1')" class="lato bg-[var(--cor-primaria)] hover:bg-[var(--cor-secundaria)] text-[var(--cor-fundo)] px-6 py-2 rounded-full inline-flex items-center gap-2 transition-all">
+                Ver certificado →
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certificado 2 -->
+        <div class="certificado-item" data-categoria="principais powerbi">
+          <div class="bg-white bg-opacity-60 rounded-xl p-6 h-full flex flex-col shadow-md" style="background-color: rgba(255, 255, 255, 0.15); backdrop-filter: blur(2px);">
+            <div class="flex items-center justify-between mb-4">
+              <img src="imagens/DSA-Logo.png" alt="Logo DataCamp" class="w-17 h-12">
+              <span class="lato2 text-sm">2024</span>
+            </div>
+            <h3 class="montserrat2 text-xl font-semibold mb-2">Power BI para Data Science</h3>
+            <p class="lato2 text-sm mb-3">Instituição: Data Science Academy</p>
+            <p class="lato text-sm mb-4 flex-grow">Curso completo de Power BI para Data Science e integração com banco de dados e EPL com Python.</p>
+            <div class="flex justify-between items-center mt-4">
+              <span class="lato2 text-sm">72 horas</span>
+              <button onclick="abrirModal('certificado2')" class="lato bg-[var(--cor-primaria)] hover:bg-[var(--cor-secundaria)] text-[var(--cor-fundo)] px-6 py-2 rounded-full inline-flex items-center gap-2 transition-all">
+                Ver certificado →
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certificado 3 -->
+        <div class="certificado-item" data-categoria="principais bibliotecas-python">
+          <div class="bg-white bg-opacity-60 rounded-xl p-6 h-full flex flex-col shadow-md" style="background-color: rgba(255, 255, 255, 0.15); backdrop-filter: blur(2px);">
+            <div class="flex items-center justify-between mb-4">
+              <img src="imagens/ALURA-Logo.jpeg" alt="Logo DataCamp" class="w-17 h-12">
+              <span class="lato2 text-sm">2024</span>
+            </div>
+            <h3 class="montserrat2 text-xl font-semibold mb-2">NumPy: Análise numérica eficiente</h3>
+            <p class="lato2 text-sm mb-3">Instituição: Alura</p>
+            <p class="lato text-sm mb-4 flex-grow">Curso de introdução à biblioteca NumPy para análise numérica eficiente com Python.</p>
+            <div class="flex justify-between items-center mt-4">
+              <span class="lato2 text-sm">8 horas</span>
+              <button onclick="abrirModal('certificado1')" class="lato bg-[var(--cor-primaria)] hover:bg-[var(--cor-secundaria)] text-[var(--cor-fundo)] px-6 py-2 rounded-full inline-flex items-center gap-2 transition-all">
+                Ver certificado →
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="text-center mt-12">
+        <a href="certificados.html" class="montserrat2 btn-primario font-semibold py-3 px-8 transition duration-300 inline-flex items-center gap-2">
+          Ver todos os certificados
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Habilidades -->
+  <section id="habilidades" class="py-20 px-10 bg-[var(--cor-fundo)]">
+    <div class="max-w-6xl mx-auto text-center" data-aos="fade-up">
+      <h3 class="montserrat1 text-4xl font-bold text-[var(--cor-primaria)] mb-12 border-b-2 inline-block pb-0.5"
+      style="border-color: var(--cor-primaria);">
+      Habilidades & Tecnologias
+    </h3>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 place-items-center">
+
+        <!-- SQL Server -->
+        <div class="flex flex-col items-center hover:scale-105 transition-transform duration-300" data-aos="fade-up" data-aos-delay="150">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" alt="SQL Server" class="w-14 h-14 mb-2">
+          <span class="lato2 text-[var(--cor-texto)] text-sm">SQL Server</span>
+          <span class="montserrat1 mt-1 px-2 py-0.5 text-xs text-white" style="background-color: var(--nivel-avancado);">
+            Avançado
+          </span>
+        </div>
+        
+        <!-- Python -->
+        <div class="flex flex-col items-center hover:scale-105 transition-transform duration-300" data-aos="fade-up" data-aos-delay="100">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="w-14 h-14 mb-2">
+          <span class="lato2 text-[var(--cor-texto)] text-sm">Python</span>
+          <span class="montserrat1 mt-1 px-2 py-0.5 text-xs text-white" style="background-color: var(--nivel-intermediario);">
+            Intermediário
+          </span>
+        </div>
+
+        <!-- Jupyter -->
+        <div class="flex flex-col items-center hover:scale-105 transition-transform duration-300" data-aos="fade-up" data-aos-delay="200">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" alt="Jupyter Notebook" class="w-14 h-14 mb-2">
+          <span class="lato2 text-[var(--cor-texto)] text-sm">Jupyter</span>
+          <span class="montserrat1 mt-1 px-2 py-0.5 text-xs text-white" style="background-color: var(--nivel-intermediario);">
+            Intermediário
+          </span>
+        </div>
+
+        <!-- Power BI -->
+        <div class="flex flex-col items-center hover:scale-105 transition-transform duration-300" data-aos="fade-up" data-aos-delay="250">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg" alt="Power BI" class="w-14 h-14 mb-2">
+          <span class="lato2 text-[var(--cor-texto)] text-sm">Power BI</span>
+          <span class="montserrat1 mt-1 px-2 py-0.5 text-xs text-white" style="background-color: var(--nivel-intermediario);">
+            Intermediário
+          </span>
+        </div>
+
+        <!-- Pandas -->
+        <div class="flex flex-col items-center hover:scale-105 transition-transform duration-300" data-aos="fade-up" data-aos-delay="300">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas" class="w-14 h-14 mb-2">
+          <span class="lato2 text-[var(--cor-texto)] text-sm">Pandas</span>
+          <span class="montserrat1 mt-1 px-2 py-0.5 text-xs text-white" style="background-color: var(--nivel-intermediario);">
+            Intermediário
+          </span>
+        </div>
+
+        <!-- NumPy -->
+        <div class="flex flex-col items-center hover:scale-105 transition-transform duration-300" data-aos="fade-up" data-aos-delay="350">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" alt="NumPy" class="w-14 h-14 mb-2">
+          <span class="lato2 text-[var(--cor-texto)] text-sm">NumPy</span>
+          <span class="montserrat1 mt-1 px-2 py-0.5 text-xs text-white" style="background-color: var(--nivel-aprendendo);">
+            Aprendendo
+          </span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section id="contato" class="py-20 bg-[var(--cor-fundo)] text-[var(--cor-texto)]">
+    <div class="max-w-3xl mx-auto px-6">
+      <div class="text-center">
+        <h3 class="montserrat1 text-4xl font-bold text-[var(--cor-secundaria)] mb-12 border-b-2 inline-block pb-0.5"
+          style="border-color: var(--cor-primaria);">
+          Contato
+        </h3>
+      </div>
+      
+      <form 
+        action="https://formspree.io/f/mdkdzvge" 
+        method="POST"
+        class="bg-[var(--cor-primaria)] p-8 rounded-xl shadow-md space-y-6 border-t-2"
+        style="border-top-color: var(--cor-primaria); background-color: rgba(255, 255, 255, 0.15); backdrop-filter: blur(2px);"
+      >
+        <!-- Nome -->
+        <div>
+          <label for="nome" class="lato2 block mb-1 font-medium">Nome</label>
+          <input
+            type="text"
+            id="nome"
+            name="name"
+            required
+            placeholder="Seu Nome da Silva"
+            class="lato w-full p-3 rounded-md bg-[var(--cor-secundaria)] border border-gray-300 focus:outline-none focus:border-[var(--cor-secundaria)] transition-all duration-300"
+            style="color: var(--cor-fundo) !important"
+          />
+        </div>
+
+        <!-- E-mail -->
+        <div>
+          <label for="email" class="lato2 block mb-1 font-medium">E-mail</label>
+          <input 
+            type="email" 
+            id="email" 
+            name="email" 
+            required 
+            placeholder="seu@email.com"
+            class="lato w-full p-3 rounded-md bg-[var(--cor-secundaria)] border border-gray-300 focus:outline-none focus:border-[var(--cor-secundaria)] transition-all duration-300"
+            style="color: var(--cor-fundo) !important"
+          />
+        </div>
+
+        <!-- Mensagem -->
+        <div>
+          <label for="mensagem" class="lato2 block mb-1 font-medium">Mensagem</label>
+          <textarea 
+            id="mensagem" 
+            name="message" 
+            rows="4" 
+            required 
+            placeholder="Sua mensagem."
+            class="lato w-full p-3 rounded-md bg-[var(--cor-secundaria)] border border-gray-300 focus:outline-none focus:border-[var(--cor-secundaria)] transition-all duration-300"
+            style="color: var(--cor-fundo) !important"
+          ></textarea>
+        </div>
+
+        <!-- Hidden (opcional) -->
+        <input type="hidden" name="_subject" value="Nova mensagem pelo portfólio de Davi Bachmann">
+        <input type="hidden" name="_redirect" value="index.html">
+
+        <!-- Botão -->
+        <div class="text-center">
+          <button type="submit"
+            class="montserrat2 btn-enviar px-8 py-3 font-semibold transition-all duration-300 shadow-md hover:scale-105">
+            Enviar mensagem
+          </button>
+        </div>
+      </form>
+
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="bg-[var(--cor-fundo)] text-[var(--cor-texto)] text-sm py-8 px-10 text-center border-t-2 border-[var(--cor-primaria)]">
+    <div class="flex flex-col md:flex-row justify-between items-center max-w-6xl mx-auto gap-4">
+      <p>&copy; 2025 Davi Bachmann. Todos os direitos reservados.</p>
+      <div class="flex gap-5 text-xl">
+        <a href="https://github.com/DaviBachmann" target="_blank" class="hover:text-[var(--cor-secundaria)] transition"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/davi-bachmann-765b79311/" target="_blank" class="hover:text-[var(--cor-secundaria)] transition"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:davibachmann0904@gmail.com" class="hover:text-[var(--cor-secundaria)] transition"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+  const form = document.getElementById('contactForm');
+  const msgSuccess = document.getElementById('mensagem-sucesso');
+  const nome = document.getElementById('nome');
+  const email = document.getElementById('email');
+  const mensagem = document.getElementById('mensagem');
+
+  const erroNome = document.getElementById('erro-nome');
+  const erroEmail = document.getElementById('erro-email');
+  const erroMensagem = document.getElementById('erro-mensagem');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    let valido = true;
+
+    if (nome.value.trim() === '') {
+      erroNome.classList.remove('hidden');
+      valido = false;
+    } else {
+      erroNome.classList.add('hidden');
+    }
+
+    const regexEmail = /\S+@\S+\.\S+/;
+    if (!regexEmail.test(email.value)) {
+      erroEmail.classList.remove('hidden');
+      valido = false;
+    } else {
+      erroEmail.classList.add('hidden');
+    }
+
+    if (mensagem.value.trim() === '') {
+      erroMensagem.classList.remove('hidden');
+      valido = false;
+    } else {
+      erroMensagem.classList.add('hidden');
+    }
+
+    if (valido) {
+      msgSuccess.classList.remove('hidden');
+      setTimeout(() => {
+        msgSuccess.classList.add('hidden');
+        form.reset();
+      }, 3000);
+    }
+    });
+</script>  
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+  const swiper = new Swiper('.projetosSwiper', {
+    effect: 'coverflow',
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: 'auto',
+    coverflowEffect: {
+      rotate: 0,
+      stretch: 0,
+      depth: 100,
+      modifier: 2,
+      slideShadows: false,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+  });
+</script>
+
+<script>
+  // Modal de certificados
+  function abrirModal(certificadoId) {
+    const modal = document.getElementById('certificadoModal');
+    const titulo = document.getElementById('modalTitulo');
+    const imagem = document.getElementById('modalImagem');
+    const download = document.getElementById('modalDownload');
+
+    const certificados = {
+      certificado1: {
+        titulo: 'Python para Data Science - DSA',
+        imagem: 'imagens/certificados/certificate-python-intermediario-DSA.png',
+        pdf: 'assets/certificate-python-para-data-science-intermediario-DSA.pdf'
+      },
+      certificado2: {
+        titulo: 'Power BI para Data Science',
+        imagem: 'imagens/certificados/certificate-power-bi-para-data-science.png',
+        pdf: 'assets/certificate-power-bi-para-data-science-DSA.pdf'
+      },
+      certificado3: {
+        titulo: 'NumPy: Análise numérica eficiente',
+        imagem: 'imagens/certificados/certificate-numpy-ALURA.png',
+        pdf: 'assets/certificate-numpy-ALURA.pdf'
+      }
+    };
+
+    const cert = certificados[certificadoId];
+    if (!cert) return;
+
+    titulo.textContent = cert.titulo;
+    imagem.src = cert.imagem;
+    download.href = cert.pdf;
+
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+  }
+
+  function fecharModal() {
+    const modal = document.getElementById('certificadoModal');
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+  }
+
+  // Fechar modal ao clicar fora
+  document.getElementById('certificadoModal').addEventListener('click', (e) => {
+    if (e.target === document.getElementById('certificadoModal')) {
+      fecharModal();
+    }
+  });
+</script>
+
+<!-- <script>
+  const form = document.getElementById('contactForm');
+  const successMessage = document.getElementById('mensagem-sucesso');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const data = new FormData(form);
+    const action = form.getAttribute('action');
+
+    fetch(action, {
+      method: 'POST',
+      body: data,
+      headers: {
+        'Accept': 'application/json'
+      }
+    }).then(response => {
+      if (response.ok) {
+        successMessage.classList.remove('hidden');
+        form.reset();
+      } else {
+        alert("Houve um erro ao enviar. Tente novamente.");
+      }
+    }).catch(() => {
+      alert("Erro de conexão. Verifique sua internet.");
+    });
+  });
+</script> -->
+
+<!-- Modal de Certificado -->
+<div id="certificadoModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+  <div class="bg-[var(--cor-fundo)] p-6 rounded-xl max-w-3xl w-full mx-4">
+    <div class="flex justify-between items-center mb-4">
+      <h3 class="montserrat2 text-2xl font-bold" id="modalTitulo"></h3>
+      <button onclick="fecharModal()" class="text-2xl">&times;</button>
+    </div>
+    <img id="modalImagem" src="" alt="Certificado" class="w-full rounded-lg mb-4">
+    <div class="text-center">
+      <a href="#" id="modalDownload" class="lato bg-[var(--cor-primaria)] hover:bg-[var(--cor-secundaria)] text-[var(--cor-texto)] px-6 py-2 rounded-full inline-flex items-center gap-2 transition-all">
+        <i class="fas fa-download"></i> Download PDF
+      </a>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

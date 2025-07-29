@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projeto - Davi Bachmann</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: var(--cor-fundo);
+      background-image: url("https://www.transparenttextures.com/patterns/pinstripe-light.png");
+    }
+
+    /* Ajuste de opacidade para as seções */
+    main {
+      position: relative;
+    }
+    
+    main::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: var(--cor-fundo);
+      opacity: 0.10;
+      z-index: 0;
+    }
+
+    main > * {
+      position: relative;
+      z-index: 1;
+    }
+  </style>
+</head>
+<body class="text-[var(--cor-texto)] font-sans bg-[var(--cor-fundo)]">
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 left-0 w-full z-50 shadow-md" style="background-color: rgba(255, 255, 255, 0.15); backdrop-filter: blur(4px);">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="index.html" class="text-[var(--cor-texto)] text-xl font-bold tracking-wide">
+        Bachmann<span class="text-[var(--cor-secundaria)]">.</span>
+      </a>
+      <ul class="flex space-x-4 text-sm">
+        <li><a href="index.html" class="montserrat1 hover:text-[var(--cor-secundaria)] transition-all nav-link">Voltar</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Conteúdo Principal -->
+  <main class="pt-24 pb-20 px-6">
+    <div class="max-w-4xl mx-auto" id="projeto-detalhes">
+      <!-- Conteúdo será preenchido via JavaScript -->
+      <div class="animate-pulse">
+        <div class="h-8 bg-[var(--cor-primaria)] rounded w-3/4 mb-4"></div>
+        <div class="h-96 bg-[var(--cor-primaria)] rounded mb-8"></div>
+        <div class="space-y-3">
+          <div class="h-4 bg-[var(--cor-primaria)] rounded w-full"></div>
+          <div class="h-4 bg-[var(--cor-primaria)] rounded w-5/6"></div>
+          <div class="h-4 bg-[var(--cor-primaria)] rounded w-4/6"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+  </script>
+  <script src="projeto.js"></script>
+
+  <!-- Modal de Imagem -->
+  <div id="modalImagem" class="fixed inset-0 bg-black bg-opacity-70 hidden items-center justify-center z-50">
+    <span onclick="fecharImagem()" class="absolute top-4 right-6 text-white text-3xl cursor-pointer">&times;</span>
+    <img id="imagemExpandida" src="" alt="Imagem em destaque" class="max-w-[90%] max-h-[90%] rounded-lg shadow-xl">
+  </div>
+
+  <script>
+    function abrirImagem(src) {
+      const modal = document.getElementById("modalImagem");
+      const imagem = document.getElementById("imagemExpandida");
+
+      imagem.src = src;
+      modal.classList.remove("hidden");
+      modal.classList.add("flex");
+    }
+
+    function fecharImagem() {
+      const modal = document.getElementById("modalImagem");
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
+    }
+
+    // Fechar ao clicar fora da imagem
+    document.getElementById("modalImagem").addEventListener("click", function (e) {
+      if (e.target.id === "modalImagem") fecharImagem();
+    });
+  </script>
+
+</body>
+</html>
