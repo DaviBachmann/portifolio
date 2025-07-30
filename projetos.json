@@ -12,7 +12,7 @@
         "https://via.placeholder.com/800x600"
       ],
       "link_github": "https://github.com/DaviBachmann/alertas-monitoramento",
-      "data": "2023",
+      "data": "2025",
       "destaques": [
         "Estrutura modular e reutilizável para criação de múltiplos alertas com base em uma única lógica",
         "Conexão com banco de dados para execução de queries complexas com múltiplas regras de negócio",
@@ -54,13 +54,35 @@
         "imagens/galeria_usuario/Screenshot_Evidencia_Usuario.png"
       ],
       "link_github": "https://github.com/DaviBachmann/manutencao-usuario",
-      "data": "2023",
+      "data": "2025",
       "destaques": [
         "Padronização automática de login e senha para usuários administradores",
         "Execução simultânea de ações em diversas bases, garantindo agilidade e consistência",
         "Centralização do controle de acessos, evitando erros manuais e atrasos operacionais",
         "Facilidade para desativar acessos de ex-colaboradores, contribuindo diretamente para a segurança da informação",
         "Código modular e reutilizável, permitindo expansão futura para outros tipos de usuários ou permissões"
+      ]
+    },
+    {
+      "id": 4,
+      "titulo": "Dashboard Financeiro",
+      "descricao_curta": "Um dashboard feito no Power BI para análise financeira.",
+      "descricao_completa": "Desenvolvimento de um dashboard financeiro interativo no Power BI, com visual moderno e personalizado baseado em um layout criado no Figma. O projeto foi planejado com foco na clareza visual e performance analítica, trazendo indicadores financeiros essenciais para facilitar a tomada de decisão do time responsável. A coleta de dados é realizada por meio de scripts em Python, que acessam múltiplos bancos de dados SQL Server. Essa abordagem permite centralizar informações de diferentes clientes e bases em um único ambiente, garantindo agilidade no processo de atualização e precisão nas análises. O projeto ainda conta com recursos como limpeza e transformação de dados automatizadas via Python, e uso de medidas DAX dentro do Power BI para cálculos de indicadores financeiros, como receita, inadimplência, entradas e saídas, entre outros. Esse trabalho foi essencial para substituir uma rotina manual e descentralizada, trazendo maior padronização, estética, confiança nos dados e ganho de tempo para o time de finanças.",
+      "tecnologias": ["Power BI", "Python", "SQL Server", "Pandas", "Figma"],
+      "imagens_galeria": [
+        "imagens/galeria_financeiro/Screenshot_Financeiro_Totais.png",
+        "imagens/galeria_financeiro/Screenshot_Financeiro_Detalhes.png",
+        "imagens/galeria_financeiro/Screenshot_Financeiro_Valores.png",
+        "imagens/galeria_financeiro/Screenshot_Financeiro_Saas.png",
+        "imagens/galeria_financeiro/Screenshot_Financeiro_Lasa.png"
+      ],
+      "link_github": "https://github.com/DaviBachmann",
+      "data": "2025",
+      "destaques": [
+        "Integração de múltiplos bancos de dados SQL Server via Python",
+        "Extração e limpeza de dados automatizadas utilizando scripts Python",
+        "Layout e visual do dashboard planejado e desenvolvido no Figma",
+        "Cálculo de indicadores financeiros estratégicos utilizando DAX"
       ]
     }
   ]
