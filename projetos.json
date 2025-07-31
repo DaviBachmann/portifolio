@@ -7,9 +7,9 @@
       "descricao_completa": "Desenvolvimento de um programa em Python para automação de alertas de monitoramento fiscal, com conexão a banco de dados, execução de regras complexas de filtragem e envio automatizado por e-mail. A solução foi planejada de forma modular e reutilizável, permitindo a criação de múltiplos alertas a partir de uma mesma base de código. Inicialmente idealizado para monitorar notas fiscais destinadas não manifestadas, o projeto evoluiu para atender outras demandas semelhantes com mínima adaptação. Cada alerta utiliza uma estrutura central de automação que executa, periodicamente, uma query SQL com múltiplas regras de negócio, identifica ocorrências críticas e dispara e-mails para os responsáveis com as informações relevantes. A arquitetura do projeto permite adicionar novos alertas apenas ajustando parâmetros e consultas, sem duplicar lógica. A modularidade e clareza da estrutura contribuíram para acelerar a entrega de novas automações, reduzir o retrabalho e aumentar a confiabilidade dos processos fiscais monitorados. Além disso, as variáveis são armazenadas em arquivos .env, centralizando e facilitando a manutenção de senhas e credenciais por parte de pessoas menos técnica.",
       "tecnologias": ["Python", "SQL Server", "Pandas", "SMTP"],
       "imagens_galeria": [
-        "https://via.placeholder.com/800x600",
-        "https://via.placeholder.com/800x600",
-        "https://via.placeholder.com/800x600"
+        "imagens/galeria_alerta/Screenshot_Email_Vivo.png",
+        "imagens/galeria_alerta/Screenshot_Email_Alerta.png",
+        "imagens/galeria_alerta/Screenshot_Planilha_Alerta.png"
       ],
       "link_github": "https://github.com/DaviBachmann/alertas-monitoramento",
       "data": "2025",
