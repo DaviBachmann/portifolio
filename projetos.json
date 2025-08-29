@@ -2,22 +2,18 @@
   "projetos": [
     {
       "id": 1,
-      "titulo": "Alertas de Monitoramento",
-      "descricao_curta": "Automação de alertas em Python para monitoramento de diferentes atividades.",
-      "descricao_completa": "Desenvolvimento de um programa em Python para automação de alertas de monitoramento fiscal, com conexão a banco de dados, execução de regras complexas de filtragem e envio automatizado por e-mail. A solução foi planejada de forma modular e reutilizável, permitindo a criação de múltiplos alertas a partir de uma mesma base de código. Inicialmente idealizado para monitorar notas fiscais destinadas não manifestadas, o projeto evoluiu para atender outras demandas semelhantes com mínima adaptação. Cada alerta utiliza uma estrutura central de automação que executa, periodicamente, uma query SQL com múltiplas regras de negócio, identifica ocorrências críticas e dispara e-mails para os responsáveis com as informações relevantes. A arquitetura do projeto permite adicionar novos alertas apenas ajustando parâmetros e consultas, sem duplicar lógica. A modularidade e clareza da estrutura contribuíram para acelerar a entrega de novas automações, reduzir o retrabalho e aumentar a confiabilidade dos processos fiscais monitorados. Além disso, as variáveis são armazenadas em arquivos .env, centralizando e facilitando a manutenção de senhas e credenciais por parte de pessoas menos técnica.",
+      "titulo": "Módulo de Alertas de Monitoramento",
+      "descricao_curta": "Um módulo desenvolvido para facilitar o desenvolvimento de alertas de monitoramento.",
+      "descricao_completa": "Desenvolvimento de um módulo em Python para padronizar e facilitar a criação de alertas de monitoramento. O módulo foi projetado para ser altamente reutilizável e fácil de aplicar até por pessoas não técnicas. Inicialmente idealizado para monitorar notas fiscais destinadas não manifestadas, o projeto evoluiu para atender outras demandas semelhantes com mínima adaptação. Cada alerta utiliza uma estrutura central de automação que executa, periodicamente, uma query SQL com múltiplas regras de negócio, identifica ocorrências críticas e dispara e-mails para os responsáveis com as informações relevantes. A arquitetura do projeto permite adicionar novos alertas apenas ajustando parâmetros e consultas, sem duplicar lógica. A modularidade e clareza da estrutura contribuíram para acelerar a entrega de novas automações, reduzir o retrabalho e aumentar a confiabilidade dos processos fiscais monitorados. Além disso, as variáveis são armazenadas em arquivos .env, centralizando e facilitando a manutenção de senhas e credenciais por parte de pessoas menos técnica.",
       "tecnologias": ["Python", "SQL Server", "Pandas", "SMTP"],
       "imagens_galeria": [
-        "imagens/galeria_alerta/Screenshot_Email_Vivo.png",
-        "imagens/galeria_alerta/Screenshot_Email_Alerta.png",
-        "imagens/galeria_alerta/Screenshot_Planilha_Alerta.png"
       ],
-      "link_github": "https://github.com/DaviBachmann/alertas-monitoramento",
+      "link_github": "https://github.com/DaviBachmann/alerta_core",
       "data": "2025",
       "destaques": [
-        "Estrutura modular e reutilizável para criação de múltiplos alertas com base em uma única lógica",
-        "Conexão com banco de dados para execução de queries complexas com múltiplas regras de negócio",
-        "Envio automatizado de e-mails com dados relevantes diretamente aos responsáveis",
-        "Agendamento periódico com execução contínua sem necessidade de intervenção manual"
+        "Código modular e reutilizável, permitindo expansão futura para outros tipos de usuários ou permissões",
+        "Facilidade de manutenção e atualização das variáveis sensíveis via arquivos .env",
+        "Praticidade na criação de novos alertas com mínima adaptação"
       ]
     },
     {
