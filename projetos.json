@@ -2,6 +2,21 @@
   "projetos": [
     {
       "id": 1,
+      "titulo": "Modelo Preditivo",
+      "descricao_curta": "Modelo Preditivo de Machine Learning para previsões de total de emissões.",
+      "descricao_completa": "aaa",
+      "tecnologias": ["Python", "SQL Server", "Machine Learning", "Pandas", "Scikit-Learn", "Matplotlib"],
+      "imagens_galeria": [
+        ""
+      ],
+      "link_github": "https://github.com/DaviBachmann/previsao-emissoes",
+      "data": "2026",
+      "destaques": [
+        "aaa"
+      ]
+    },
+    {
+      "id": 2,
       "titulo": "Alertas de Monitoramento",
       "descricao_curta": "Automação de alertas em Python para monitoramento de diferentes atividades.",
       "descricao_completa": "Desenvolvimento de um programa em Python para automação de alertas de monitoramento fiscal, com conexão a banco de dados, execução de regras complexas de filtragem e envio automatizado por e-mail. A solução foi planejada de forma modular e reutilizável, permitindo a criação de múltiplos alertas a partir de uma mesma base de código. Inicialmente idealizado para monitorar notas fiscais destinadas não manifestadas, o projeto evoluiu para atender outras demandas semelhantes com mínima adaptação. Cada alerta utiliza uma estrutura central de automação que executa, periodicamente, uma query SQL com múltiplas regras de negócio, identifica ocorrências críticas e dispara e-mails para os responsáveis com as informações relevantes. A arquitetura do projeto permite adicionar novos alertas apenas ajustando parâmetros e consultas, sem duplicar lógica. A modularidade e clareza da estrutura contribuíram para acelerar a entrega de novas automações, reduzir o retrabalho e aumentar a confiabilidade dos processos fiscais monitorados. Além disso, as variáveis são armazenadas em arquivos .env, centralizando e facilitando a manutenção de senhas e credenciais por parte de pessoas menos técnica.",
@@ -21,7 +36,7 @@
       ]
     },
     {
-      "id": 2,
+      "id": 3,
       "titulo": "Extrator de XML",
       "descricao_curta": "Programa para realizar download de milhões de XMLs utilizando threads e conexões com API.",
       "descricao_completa": "Desenvolvimento de um programa em Python com multithreading, conexão a banco de dados e consumo de APIs para download massivo de documentos XML. \nO projeto surgiu ao perceber a ineficiência do método antigo de download via PowerShell, que limitava a operação a cerca de 10 mil XMLs por hora. A nova abordagem viabilizou o download de até 100 mil documentos no mesmo intervalo de tempo — um aumento expressivo de produtividade. \nO programa permite diferentes métodos para inserção da chave de acesso, coleta os dados diretamente do banco em tempo real e realiza os downloads de forma paralela, com melhoria considerável na performance. \nA performance final pode variar conforme o hardware e a estabilidade da conexão com a internet.",
@@ -43,7 +58,7 @@
       ]
     },
     {
-      "id": 3,
+      "id": 4,
       "titulo": "Programa de Manutenção de Usuários",
       "descricao_curta": "Um programa para facilitar o cadastro e desativação de usuários administradores.",
       "descricao_completa": "Desenvolvimento de uma aplicação em Python para padronizar e automatizar o processo de criação e desativação de usuários administradores nas bases da empresa. O projeto surgiu a partir da necessidade de aumentar a segurança e a praticidade na gestão de acessos administrativos, evitando processos manuais e propensos a falhas. Com o QG, é possível criar rapidamente um usuário com o mesmo login e senha em múltiplas bases, garantindo consistência e economia de tempo. Além disso, a funcionalidade de desativação centralizada permite encerrar acessos de forma ágil e padronizada, o que contribui diretamente para a redução de riscos de segurança — especialmente em casos onde o desligamento do colaborador exige ação imediata. A ferramenta proporciona mais controle, padronização e segurança no ambiente corporativo, sendo uma solução eficiente e reutilizável para times de suporte, infraestrutura ou segurança da informação.",
@@ -64,7 +79,7 @@
       ]
     },
     {
-      "id": 4,
+      "id": 5,
       "titulo": "Dashboard Financeiro",
       "descricao_curta": "Um dashboard feito no Power BI para análise financeira.",
       "descricao_completa": "Desenvolvimento de um dashboard financeiro interativo no Power BI, com visual moderno e personalizado baseado em um layout criado no Figma. O projeto foi planejado com foco na clareza visual e performance analítica, trazendo indicadores financeiros essenciais para facilitar a tomada de decisão do time responsável. A coleta de dados é realizada por meio de scripts em Python, que acessam múltiplos bancos de dados SQL Server. Essa abordagem permite centralizar informações de diferentes clientes e bases em um único ambiente, garantindo agilidade no processo de atualização e precisão nas análises. O projeto ainda conta com recursos como limpeza e transformação de dados automatizadas via Python, e uso de medidas DAX dentro do Power BI para cálculos de indicadores financeiros, como receita, inadimplência, entradas e saídas, entre outros. Esse trabalho foi essencial para substituir uma rotina manual e descentralizada, trazendo maior padronização, estética, confiança nos dados e ganho de tempo para o time de finanças.",
