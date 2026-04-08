@@ -4,15 +4,20 @@
       "id": 1,
       "titulo": "Modelo Preditivo",
       "descricao_curta": "Modelo Preditivo de Machine Learning para previsões de total de emissões.",
-      "descricao_completa": "aaa",
+      "descricao_completa": "Desenvolvi este projeto com o objetivo de prever o volume mensal de emissões de documentos fiscais de um cliente, utilizando dados históricos reais e aplicando técnicas de análise de dados e machine learning. O foco principal foi criar uma solução que não apenas tivesse boa performance estatística, mas que também gerasse valor prático para o negócio, auxiliando na antecipação de demandas, planejamento financeiro e dimensionamento de infraestrutura. O projeto foi construído em Python e percorreu todas as etapas de um pipeline completo de dados. Inicialmente, realizei o tratamento e organização dos dados, garantindo consistência temporal e lidando com lacunas na base. Em seguida, conduzi uma análise exploratória (EDA) para entender o comportamento das emissões ao longo do tempo e identificar padrões relevantes. A etapa mais importante do projeto foi a engenharia de features, onde desenvolvi variáveis baseadas no comportamento temporal dos dados, como médias móveis (curto, médio e longo prazo), valores defasados (lags), taxas de crescimento e aceleração de crescimento, além de indicadores de pico recente. Durante esse processo, houve um cuidado especial em evitar data leakage, garantindo que todas as variáveis fossem construídas apenas com informações disponíveis até o momento da previsão. Foram testados diferentes modelos de regressão, incluindo Regressão Linear e Random Forest. A Regressão Linear apresentou melhor desempenho para o problema, principalmente devido à quantidade limitada de dados e à natureza relativamente linear da tendência observada. Após diversas iterações e refinamentos, o modelo final atingiu aproximadamente 10,5% de erro médio percentual (MAPE), demonstrando boa capacidade preditiva mesmo com um histórico limitado. O projeto também evidenciou, na prática, que a qualidade das features tem maior impacto no desempenho do modelo do que a complexidade do algoritmo utilizado. Além do aspecto técnico, o projeto foi conduzido com forte foco em aplicação real, conectando os resultados a possíveis decisões estratégicas e operacionais dentro da empresa.",
       "tecnologias": ["Python", "SQL Server", "Machine Learning", "Pandas", "Scikit-Learn", "Matplotlib"],
       "imagens_galeria": [
-        ""
+        "imagens/galeria_modelo/notebook-modelo.png",
+        "imagens/galeria_modelo/grafico-modelo.png"
       ],
       "link_github": "https://github.com/DaviBachmann/previsao-emissoes",
       "data": "2026",
       "destaques": [
-        "aaa"
+        "Construção de pipeline completo de dados em Python (EDA → Feature Engineering → Modelagem)",
+        "Desenvolvimento de features temporais (lags, médias móveis, crescimento e aceleração)",
+        "Identificação e correção de data leakage",
+        "Comparação entre modelos (Regressão Linear vs Random Forest)",
+        "Otimização iterativa baseada em métricas (MAPE, MAE, RMSE)"
       ]
     },
     {
