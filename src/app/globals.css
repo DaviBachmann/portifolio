@@ -86,6 +86,214 @@ body::before {
     box-shadow: 0 0 0 3px rgba(145, 196, 182, 0.32);
     outline: none;
   }
+
+  .hero-section {
+    isolation: isolate;
+  }
+
+  .hero-section::after {
+    background:
+      radial-gradient(circle at 50% 52%, rgba(61, 68, 77, 0) 0 42%, rgba(61, 68, 77, 0.72) 76%),
+      linear-gradient(180deg, rgba(61, 68, 77, 0.16), var(--cor-fundo));
+    content: "";
+    inset: auto 0 0;
+    height: 34%;
+    pointer-events: none;
+    position: absolute;
+    z-index: 2;
+  }
+
+  .hero-ambient {
+    animation: hero-radial-drift 18s ease-in-out infinite alternate;
+    background:
+      radial-gradient(circle at 28% 32%, rgba(145, 196, 182, 0.24), rgba(145, 196, 182, 0.05) 31%, transparent 58%),
+      radial-gradient(circle at 72% 42%, rgba(241, 248, 246, 0.18), rgba(241, 248, 246, 0.045) 28%, transparent 54%),
+      radial-gradient(circle at 50% 76%, rgba(145, 196, 182, 0.14), transparent 50%);
+    filter: blur(10px);
+    inset: -16% -12% -10%;
+    opacity: 0.95;
+    pointer-events: none;
+    position: absolute;
+    transform: translate3d(0, 0, 0) scale(1.02);
+    will-change: transform;
+    z-index: 0;
+  }
+
+  .hero-grid {
+    animation: hero-grid-shift 28s linear infinite;
+    background-image:
+      linear-gradient(rgba(241, 248, 246, 0.055) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(241, 248, 246, 0.045) 1px, transparent 1px);
+    background-size: 72px 72px;
+    inset: 0;
+    mask-image: radial-gradient(circle at 50% 45%, black 0 42%, transparent 76%);
+    opacity: 0.46;
+    pointer-events: none;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .hero-data-field {
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .data-node,
+  .data-line {
+    position: absolute;
+  }
+
+  .data-node {
+    animation: data-node-breathe 8s ease-in-out infinite;
+    border: 1px solid rgba(241, 248, 246, 0.22);
+    border-radius: 0.5rem;
+    box-shadow: 0 0 24px rgba(145, 196, 182, 0.16);
+    height: 0.7rem;
+    width: 0.7rem;
+  }
+
+  .data-node::after {
+    background: rgba(145, 196, 182, 0.72);
+    border-radius: 999px;
+    content: "";
+    inset: 3px;
+    position: absolute;
+  }
+
+  .data-node-one {
+    left: 17%;
+    top: 34%;
+  }
+
+  .data-node-two {
+    animation-delay: -2.5s;
+    right: 19%;
+    top: 30%;
+  }
+
+  .data-node-three {
+    animation-delay: -5s;
+    bottom: 28%;
+    left: 68%;
+  }
+
+  .data-line {
+    animation: data-line-drift 14s ease-in-out infinite alternate;
+    background: linear-gradient(90deg, transparent, rgba(145, 196, 182, 0.28), transparent);
+    height: 1px;
+    opacity: 0.72;
+    transform-origin: left center;
+  }
+
+  .data-line-one {
+    left: 18%;
+    top: 36%;
+    transform: rotate(12deg);
+    width: 18rem;
+  }
+
+  .data-line-two {
+    animation-delay: -4s;
+    right: 15%;
+    top: 42%;
+    transform: rotate(-18deg);
+    width: 15rem;
+  }
+
+  .data-line-three {
+    animation-delay: -8s;
+    bottom: 32%;
+    left: 55%;
+    transform: rotate(24deg);
+    width: 12rem;
+  }
+}
+
+@keyframes hero-radial-drift {
+  0% {
+    transform: translate3d(-1.5%, -1%, 0) scale(1.02);
+  }
+
+  100% {
+    transform: translate3d(1.5%, 1%, 0) scale(1.07);
+  }
+}
+
+@keyframes hero-grid-shift {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 72px 72px;
+  }
+}
+
+@keyframes data-node-breathe {
+  0%,
+  100% {
+    opacity: 0.42;
+    transform: scale(0.92);
+  }
+
+  50% {
+    opacity: 0.9;
+    transform: scale(1);
+  }
+}
+
+@keyframes data-line-drift {
+  0% {
+    opacity: 0.2;
+    translate: -0.5rem 0;
+  }
+
+  100% {
+    opacity: 0.72;
+    translate: 0.5rem 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-ambient {
+    inset: -12% -42% -8%;
+    opacity: 0.78;
+  }
+
+  .hero-grid {
+    background-size: 54px 54px;
+    opacity: 0.32;
+  }
+
+  .data-node-one {
+    left: 9%;
+    top: 31%;
+  }
+
+  .data-node-two {
+    right: 8%;
+    top: 38%;
+  }
+
+  .data-node-three,
+  .data-line-three {
+    display: none;
+  }
+
+  .data-line-one {
+    left: 10%;
+    top: 34%;
+    width: 9rem;
+  }
+
+  .data-line-two {
+    right: 3%;
+    top: 45%;
+    width: 8rem;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -96,5 +304,12 @@ body::before {
     animation-iteration-count: 1 !important;
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
+  }
+
+  .hero-ambient,
+  .hero-grid,
+  .data-node,
+  .data-line {
+    animation: none !important;
   }
 }

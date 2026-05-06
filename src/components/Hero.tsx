@@ -10,13 +10,23 @@ export function Hero() {
 
   return (
     <section
-      className="relative flex min-h-screen items-center justify-center overflow-hidden px-5 pb-20 pt-28 md:px-8"
+      className="hero-section relative flex min-h-screen items-center justify-center overflow-hidden px-5 pb-20 pt-28 md:px-8"
       id="inicio"
     >
+      <div aria-hidden="true" className="hero-ambient" />
+      <div aria-hidden="true" className="hero-grid" />
+      <div aria-hidden="true" className="hero-data-field">
+        <span className="data-node data-node-one" />
+        <span className="data-node data-node-two" />
+        <span className="data-node data-node-three" />
+        <span className="data-line data-line-one" />
+        <span className="data-line data-line-two" />
+        <span className="data-line data-line-three" />
+      </div>
       <div className="absolute inset-x-0 top-24 h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
       <motion.div
         animate={reduceMotion ? undefined : { opacity: 1, y: 0 }}
-        className="mx-auto max-w-4xl text-center"
+        className="relative z-10 mx-auto max-w-4xl text-center"
         initial={reduceMotion ? false : { opacity: 0, y: 26 }}
         transition={{ duration: 0.7, ease: "easeOut" }}
       >
