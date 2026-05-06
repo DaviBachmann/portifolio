@@ -1,69 +1,108 @@
 # Portfólio Davi Bachmann
 
-Bem-vindo ao meu portfólio!  
-Aqui você encontra meus principais projetos, certificados, currículo e exemplos de trabalhos realizados nas áreas de Data Science, Análise de Dados, Automação e Desenvolvimento Python.
+Portfólio profissional em Next.js para apresentar projetos, certificados, currículo e formas de contato nas áreas de Data Science, Análise de Dados, Automação e Desenvolvimento Python.
 
----
+## Stack
 
-## 📁 Estrutura do Portfólio
+- Next.js com App Router
+- React
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- Lucide React
+- Formspree
+- Deploy pela Vercel
 
-- **index.html** — Página inicial do portfólio
-- **projeto.html** — Detalhes de projetos realizados
-- **certificados.html** — Galeria de certificados
-- **projetos.json** — Dados dos projetos exibidos no portfólio
-- **assets/** — Certificados em PDF e currículo
-- **imagens/** — Logos, imagens de projetos e galerias de screenshots
+## Como rodar localmente
 
----
+```bash
+npm install
+npm run dev
+```
 
-## 🚀 Principais Funcionalidades
+Depois acesse `http://localhost:3000`.
 
-- **Visualização de projetos:**  
-  Veja detalhes, imagens e descrições dos principais projetos desenvolvidos.
+Para validar produção localmente:
 
-- **Galeria de certificados:**  
-  Certificados de cursos e formações em Data Science, Python, Power BI e mais.
+```bash
+npm run lint
+npm run build
+npm run start
+```
 
-- **Currículo atualizado:**  
-  Download do currículo em PDF.
+## Estrutura principal
 
-- **Screenshots e demonstrações:**  
-  Imagens ilustrativas dos sistemas, dashboards e automações criadas.
+- `src/app` contém as rotas da aplicação.
+- `src/components` contém as seções e componentes reutilizáveis.
+- `src/data/projects.ts` contém os projetos exibidos na home e nas páginas dinâmicas.
+- `src/data/certificates.ts` contém os certificados e filtros.
+- `src/data/site.ts` contém textos fixos, links sociais, habilidades e endpoint do formulário.
+- `public/imagens` contém imagens, logos, certificados e galerias.
+- `public/assets` contém PDFs de certificados e currículo.
 
----
+## Como editar projetos
 
-## 🛠️ Tecnologias Utilizadas
+Edite `src/data/projects.ts`.
 
-- HTML5, CSS3, JavaScript
-- Estrutura de dados em JSON
-- Organização modular de imagens e assets
+Cada projeto precisa de:
 
----
+- `slug`, usado na URL `/projetos/[slug]`
+- `title`
+- `shortDescription`
+- `fullDescription`
+- `technologies`
+- `coverImage`
+- `gallery`
+- `githubUrl`
+- `year`
+- `highlights`
 
-## 📄 Como acessar
+As imagens devem ficar em `public/imagens` e ser referenciadas com caminho absoluto, por exemplo:
 
-Basta acessar [https://davibachmann.github.io/portifolio/](#)
+```ts
+coverImage: "/imagens/logo_modelo.avif"
+```
 
----
+## Como editar certificados
 
-## 📚 Certificados
+Edite `src/data/certificates.ts`.
 
-Os certificados estão disponíveis em PDF na pasta `assets/` e em imagem na pasta `imagens/certificados/`.
+As categorias disponíveis são:
 
----
+- `principais`
+- `datascience`
+- `powerbi`
+- `bibliotecas-python`
+- `outros`
 
-## 📞 Contato
+Imagens de certificados ficam em `public/imagens/certificados`. PDFs ficam em `public/assets`.
 
-- [LinkedIn](https://www.linkedin.com/in/davi-bachmann-765b79311/)
-- [E-mail](mailto:davi.bachmann0904@gmail.com)
+## Formulário de contato
 
----
+O formulário usa Formspree com o endpoint configurado em `src/data/site.ts`:
 
-## 📝 Licença
+```ts
+formspreeEndpoint: "https://formspree.io/f/mdkdzvge"
+```
 
-Este portfólio é de uso pessoal e demonstração.  
-Sinta-se à vontade para se inspirar, mas não copie projetos ou certificados sem autorização.
+Para trocar o formulário, substitua esse valor pelo novo endpoint do Formspree.
 
----
+## Deploy na Vercel
 
-**Obrigado pela visita!**
+1. Suba o repositório no GitHub.
+2. Importe o projeto na Vercel.
+3. Selecione este repositório.
+4. Use os comandos padrão:
+   - Install Command: `npm install`
+   - Build Command: `npm run build`
+   - Output: gerenciado pelo Next.js
+5. Faça o deploy.
+
+Opcionalmente, configure a variável `NEXT_PUBLIC_SITE_URL` na Vercel com a URL final do site, por exemplo `https://seu-projeto.vercel.app`. Ela é usada para resolver imagens de Open Graph e SEO social.
+
+## Observações de migração
+
+- As páginas antigas `index.html`, `certificados.html` e `projeto.html?id=...` foram substituídas por rotas Next.js.
+- As páginas de projeto agora usam URLs amigáveis, como `/projetos/modelo-preditivo`.
+- Os screenshots BMP do Extrator de XML foram convertidos para PNG em `public/imagens/galeria_extrator`.
+- O visual mantém a paleta, tipografia, textura e personalidade do portfólio original, com uma composição mais minimalista, responsiva e interativa.
