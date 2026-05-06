@@ -66,7 +66,7 @@ Cada projeto precisa de:
 As imagens devem ficar em `public/imagens` e ser referenciadas com caminho absoluto, por exemplo:
 
 ```ts
-coverImage: "/imagens/logo_modelo.avif"
+coverImage: "/imagens/logo_modelo.png"
 ```
 
 ## Como editar certificados

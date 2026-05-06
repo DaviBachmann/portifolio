@@ -29,7 +29,7 @@ export const projects: Project[] = [
       "Scikit-Learn",
       "Matplotlib"
     ],
-    coverImage: "/imagens/logo_modelo.avif",
+    coverImage: "/imagens/logo_modelo.png",
     gallery: [
       "/imagens/galeria_modelo/notebook-modelo.png",
       "/imagens/galeria_modelo/grafico-modelo.png"
@@ -103,7 +103,7 @@ export const projects: Project[] = [
     fullDescription:
       "Desenvolvimento de uma aplicação em Python para padronizar e automatizar o processo de criação e desativação de usuários administradores nas bases da empresa. O projeto nasceu da necessidade de aumentar a segurança e a praticidade na gestão de acessos administrativos. Com a ferramenta, é possível criar rapidamente um usuário com o mesmo login e senha em múltiplas bases, garantindo consistência e economia de tempo. A funcionalidade de desativação centralizada permite encerrar acessos de forma ágil e padronizada, reduzindo riscos de segurança em cenários sensíveis.",
     technologies: ["Python", "SQL Server"],
-    coverImage: "/imagens/logo_manutencao_usuario.jpg",
+    coverImage: "/imagens/logo_manutencao_usuario.png",
     gallery: [
       "/imagens/galeria_usuario/Screenshot_Cadastro_Usuario.png",
       "/imagens/galeria_usuario/Screenshot_Desativacao_Usuario.png",
