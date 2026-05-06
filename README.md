@@ -2,6 +2,12 @@
 
 Portfólio profissional em Next.js para apresentar projetos, certificados, currículo e formas de contato nas áreas de Data Science, Análise de Dados, Automação e Desenvolvimento Python.
 
+## Site publicado
+
+- Produção: [https://portfolio-plum-iota.vercel.app](https://portfolio-plum-iota.vercel.app)
+- Plataforma: Vercel
+- Repositório: [DaviBachmann/portifolio](https://github.com/DaviBachmann/portifolio)
+
 ## Stack
 
 - Next.js com App Router
@@ -89,6 +95,19 @@ Para trocar o formulário, substitua esse valor pelo novo endpoint do Formspree.
 
 ## Deploy na Vercel
 
+O projeto já está conectado à Vercel e publicado em produção.
+
+Configuração atual:
+
+- Production URL: `https://portfolio-plum-iota.vercel.app`
+- Project Name: `portfolio`
+- Framework: `Next.js`
+- Build Command: `npm run build`
+- Install Command: `npm install`
+- Variável de produção: `NEXT_PUBLIC_SITE_URL=https://portfolio-plum-iota.vercel.app`
+
+Para recriar o deploy em outra conta/projeto:
+
 1. Suba o repositório no GitHub.
 2. Importe o projeto na Vercel.
 3. Selecione este repositório.
@@ -96,9 +115,10 @@ Para trocar o formulário, substitua esse valor pelo novo endpoint do Formspree.
    - Install Command: `npm install`
    - Build Command: `npm run build`
    - Output: gerenciado pelo Next.js
-5. Faça o deploy.
+5. Configure `NEXT_PUBLIC_SITE_URL` com a URL pública final.
+6. Faça o deploy.
 
-Opcionalmente, configure a variável `NEXT_PUBLIC_SITE_URL` na Vercel com a URL final do site, por exemplo `https://seu-projeto.vercel.app`. Ela é usada para resolver imagens de Open Graph e SEO social.
+A variável `NEXT_PUBLIC_SITE_URL` é usada para resolver imagens de Open Graph e SEO social.
 
 ## Observações de migração
 
