@@ -1,3 +1,6 @@
+"use client";
+
+import { motion, useReducedMotion } from "framer-motion";
 import Image from "next/image";
 import { ExternalLink, Github } from "lucide-react";
 import { ButtonLink } from "@/components/Button";
@@ -6,11 +9,21 @@ import type { Project } from "@/data/projects";
 
 type ProjectCardProps = {
   project: Project;
+  index?: number;
 };
 
-export function ProjectCard({ project }: ProjectCardProps) {
+export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
+  const reduceMotion = useReducedMotion();
+  const direction = index % 2 === 0 ? -36 : 36;
+
   return (
-    <article className="glass-card group grid min-h-full overflow-hidden md:grid-cols-[1.05fr_0.95fr]">
+    <motion.article
+      className="glass-card group grid min-h-full overflow-hidden md:grid-cols-[1.05fr_0.95fr]"
+      initial={reduceMotion ? false : { opacity: 0, x: direction }}
+      transition={{ duration: 0.65, ease: "easeOut" }}
+      viewport={{ once: true, amount: 0.28 }}
+      whileInView={reduceMotion ? undefined : { opacity: 1, x: 0 }}
+    >
       <div className="flex flex-col p-6 md:p-8">
         <div className="mb-5 flex items-center justify-between gap-4">
           <span className="font-body text-sm text-muted">{project.year}</span>
@@ -54,6 +67,6 @@ export function ProjectCard({ project }: ProjectCardProps) {
           src={project.coverImage}
         />
       </div>
-    </article>
+    </motion.article>
   );
 }
